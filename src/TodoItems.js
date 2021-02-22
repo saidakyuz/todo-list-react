@@ -8,28 +8,36 @@ class TodoItems extends Component {
     }
 
     delete(key) {
-        this.props.delete(key);  // DELETE??? nerede tanimlandi bu method predefined mi?
+        this.props.delete(key);
+    }
+
+    check(key) {
+        this.props.check(key);
     }
 
     createTasks(item) {
         return <li key={item.key}>
-            <div><button className="check" onClick={() => this.delete(item.key)}>
-                <i class="fa fa-check"></i>
-            </button>
-                {item.text}</div>
+            <div>
+                <button className="check" onClick={() => this.check(item.key)}>
+                    <i className="fa fa-check"></i>
+                </button>
+                <span className={item.className}>{item.text}</span>
+            </div>
+            {/* <p>Due to:</p> */}
             <button className="trash" onClick={() => this.delete(item.key)}>
-                <i class="fa fa-trash"></i>
+                <i className="fa fa-trash"></i>
             </button>
         </li>
     }
 
     render() {
-        const todoEntries = this.props.entries;
-        const listItems = todoEntries.map(this.createTasks);
+        
+       
+        
 
         return (
             <ul className="theList">
-                {listItems}
+                {this.props.entries.map(this.createTasks)}
             </ul>
         );
     }

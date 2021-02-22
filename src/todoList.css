@@ -1,27 +1,85 @@
+.todoListMain {
+    width: 100%;
+}
+
+button.check {
+    margin-right: 1em;
+}
+
+li .checked {
+    text-decoration: line-through;
+}
+
 .todoListMain .header input {
     padding: 1em;
     font-size: 1em;
+    margin-right: 1em;
     border: 2px solid #FFF;
     border-radius: 0.2em;
-    width: 16.5em;
+    /* width: 16.5em; */
 }
+
+.todoListMain .header form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MuiFormControl-root {
+    border: 2px solid #FFF;
+    border-radius: 0.2em;
+    background: rgb(255, 255, 255);
+    margin-right: 1em !important;
+    display: inline-flex;
+    padding: 0;
+    position: relative;
+    min-width: 0;
+    flex-direction: column;
+    vertical-align: bottom;
+}
+
+
+/* .todoListMain .header .MuiFormControl-marginNormal {
+    padding: 1em;
+    font-size: 1em;
+    /* width: 16.5em; 
+
+margin: 0em;
+
+}
+.MuiInputBase-root .MuiInput-root .MuiInput-underline .MuiInputBase-formControl .MuiInput-formControl .MuiInputBase-adornedEnd::before {
+    content: none;
+}
+.MuiInputBase-root .MuiInput-root .MuiInput-underline .MuiInputBase-formControl .MuiInput-formControl .MuiInputBase-adornedEnd::after {
+    content: none;
+}
+.todoListMain .header #date-picker-dialog {
+    background-color: #ffffff;
+    border: 2px solid #FFF;
+    border-radius: 0.2em;
+    margin: 0em;
+}
+*/
 
 .todoListMain .header button {
     padding: 1em;
     font-size: 1em;
-    margin: 1em;
-    margin-right: 0px;
     background-color: rgb(27, 109, 134);
     color: #FFF;
     border: 2px solid rgb(27, 109, 134);
-    border-radius: 1em;
+    border-radius: 0.2em;
     ;
 }
+
+
+/* .todoListMain .header button svg {
+    height: 0.8em;
+} */
 
 .todoListMain .header button:hover {
     background-color: #ced1d6;
     border: 2px solid #ced1d6;
-    border-radius: 1em;
+    border-radius: 0.2em;
     color: rgb(27, 109, 134);
     cursor: pointer;
 }
@@ -29,17 +87,19 @@
 .todoListMain .theList {
     list-style: none;
     padding-left: 0;
-    width: 26.2em;
+    /* width: 26.2em; */
 }
 
 .todoListMain .theList li {
     color: #333;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgb(255, 255, 255);
     padding: 1.5em;
     margin-bottom: 1.5em;
+    margin-right: 19.5em;
     border-radius: 0.2em;
     transition: background-color .2s ease-out;
     height: auto;
+    width: 93.5%;
     display: flex;
     justify-content: space-between;
 }
