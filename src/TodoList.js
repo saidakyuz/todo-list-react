@@ -33,6 +33,19 @@ class TodoList extends Component {
 
     }
 
+    // componentDidMount() {
+    //     const newItems = JSON.parse(localStorage.getItem('Detail') || "defaultValue");
+    //     this.state.items = newItems;
+        
+    // }
+
+    //DOESN'T WORK PROPER.
+    componentDidUpdate() {
+        localStorage.setItem('Items', JSON.stringify(this.state.items));
+    }
+
+
+    //DOESN'T WORK PROPER.
     handleDate() {
         console.log("Hallo");
     }
@@ -103,7 +116,7 @@ class TodoList extends Component {
 
     render() {
         return (
-            <Tabs>
+            <Tabs className="myTabs">
                 <TabList>
                     <Tab>Tasks</Tab>
                     <Tab>Last Deleted Task</Tab>

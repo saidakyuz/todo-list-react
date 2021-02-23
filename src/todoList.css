@@ -2,6 +2,11 @@
     width: 100%;
 }
 
+.myTabs {
+    margin: 1em !important;
+    font-weight: 700;
+}
+
 button.check {
     margin-right: 1em;
 }

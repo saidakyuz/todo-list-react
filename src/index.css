@@ -9,7 +9,7 @@ body {
 #container {
     display: flex;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
     overflow: scroll;
     height: 30em;
     border-radius: 3em;
